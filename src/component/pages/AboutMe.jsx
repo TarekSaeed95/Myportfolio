@@ -2,7 +2,7 @@ import React from 'react'
 import about from '../../images/about.png'
 import {FaArrowRight} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import cv from '../../images/Tarek_Saeed.docx'
+import cv from '../../images/Tarek Resume.pdf'
 function AboutMe() {
   return (
     <div className="about min-h-screen flex items-center ">
