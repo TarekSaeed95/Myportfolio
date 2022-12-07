@@ -6,8 +6,8 @@ import cv from '../../images/Tarek Resume.pdf'
 function AboutMe() {
   return (
     <div className="about min-h-screen flex items-center ">
-      <div className="container flex justify-around items-center mt-48 lg:mt-0">
-      <div className="image max-w-sm mb-10 lg:mb-0">
+      <div className="container flex justify-around items-center mt-48 p-8 lg:mt-0">
+      <div className="image hidden  md:block max-w-sm mb-10 lg:mb-0">
           <img src={about} alt="about" />
         </div>
        <div className="text flex flex-col gap-5  items-start mb-10 lg:mb-0">

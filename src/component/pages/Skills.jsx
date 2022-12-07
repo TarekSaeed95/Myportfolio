@@ -3,7 +3,7 @@ function Skills() {
 
   return (
     <div className="our-skills bg-slate-200 min-h-screen flex items-center" id="our-skills">
-    <div className="container ">
+    <div className="container p-5">
       <div className="bot-area">
           <img src={skills} alt=""/>
           <div className="content">

@@ -3,7 +3,7 @@ import {FaClock, FaFacebook, FaLink,   FaMapMarked, FaPhone, FaTwitter,  FaYoutu
 function Contact() {
   return (
     <div className="footer text-slate-200 min-h-screen flex items-center text-xl ">
-    <div className="container flex justify-between md:items-center items-start flex-col sm:flex-row gap-10 lg:gap-0">
+    <div className="container flex justify-between md:items-center p-5 items-start flex-col sm:flex-row gap-10 lg:gap-0">
         <div className="contact text-slate-200">
             <div className="address text-slate-200 flex gap-3 items-center">
                 <FaMapMarked className='text-secondary'/>
