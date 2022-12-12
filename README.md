@@ -1,2 +1,2 @@
 # Myportfolio
-![Book logo](docs/img/project screen.jpeg)
+![Book logo](Myportfolio/img/project screen.jpeg)
