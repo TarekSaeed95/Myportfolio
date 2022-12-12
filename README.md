@@ -1,3 +1,3 @@
 # Myportfolio
-![Alt text](/img/projects/Feedback.PNG)
+![Alt text](/img/project screen.jpg)
 
