@@ -3020,7 +3020,7 @@ html {
   padding-bottom: 6rem;
 }
 #home .container{
-  padding-bottom: 100px;
+  padding-block: 100px;
 }
 /*** Spinner ***/
 
