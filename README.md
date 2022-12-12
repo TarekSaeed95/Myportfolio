@@ -1,3 +1,3 @@
 # Myportfolio
-![Alt text](/img/bg-header.png)
+![Alt text](/img/project screen.jpeg)
 
