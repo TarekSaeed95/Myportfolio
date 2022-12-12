@@ -14,33 +14,28 @@
     
     // Initiate the wowjs
     new WOW().init();
-
-
     // Navbar on scrolling
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
+        
             $('.navbar').fadeIn('slow').css('display', 'flex');
-        } else {
-            $('.navbar').fadeOut('slow').css('display', 'none');
-        }
     });
 
 
     // Smooth scrolling on the navbar links
-    $(".navbar-nav a").on('click', function (event) {
-        if (this.hash !== "") {
-            event.preventDefault();
+    // $(".navbar-nav a").on('click', function (event) {
+    //     if (this.hash !== "") {
+    //         event.preventDefault();
             
-            $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 45
-            }, 100, 'easeInOutExpo');
+    //         $('html, body').animate({
+    //             scrollTop: $(this.hash).offset().top - 45
+    //         }, 100, 'easeInOutExpo');
             
-            if ($(this).parents('.navbar-nav').length) {
-                $('.navbar-nav .active').removeClass('active');
-                $(this).closest('a').addClass('active');
-            }
-        }
-    });
+    //         if ($(this).parents('.navbar-nav').length) {
+    //             $('.navbar-nav .active').removeClass('active');
+    //             $(this).closest('a').addClass('active');
+    //         }
+    //     }
+    // });
     
     
     // Back to top button
@@ -75,7 +70,6 @@
     $('.btn-play').click(function () {
         $videoSrc = $(this).data("src");
     });
-    console.log($videoSrc);
     $('#videoModal').on('shown.bs.modal', function (e) {
         $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
     })
@@ -123,4 +117,9 @@
 
     
 })(jQuery);
+let scrollIndicator=document.querySelector(".scroll-indicator")
+let overallHeight=document.documentElement.scrollHeight-window.innerHeight
+window.addEventListener("scroll",()=>{
+    scrollIndicator.style.width=`calc(${window.scrollY * 100 / overallHeight}% - ${70}px)`
 
+})
