@@ -1,2 +1,3 @@
 # Myportfolio
-![Book logo](/Myportfolio/img/project screen.jpeg)
+![Alt text](/Myportfolio/img/bg-header.png "Optional title")
+
