@@ -1,3 +1,3 @@
 # Myportfolio
-![Alt text](/Myportfolio/img/bg-header.png)
+![Alt text](Myportfolio/img/bg-header.png)
 
