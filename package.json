@@ -1,5 +1,11 @@
 {
+  "name": "Myportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "axios": "^1.2.1",
     "daisyui": "^2.42.1"
   },
   "devDependencies": {

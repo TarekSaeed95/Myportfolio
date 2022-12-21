@@ -14,7 +14,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -37,379 +38,487 @@
 
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+<body class="overflow-x-hidden" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
     <!-- Spinner End -->
+    <div class="main-page">
+        <!-- Navbar Start -->
+        <nav id="main-nav"
+            class="navbar main-nav navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn"
+            data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <h1 class="text-primary fw-bold m-0">Tarek</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center py-4 py-lg-0" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0 flex justify-center ">
+                    <a href="#home" class="nav-item nav-link">Home</a>
+                    <a href="#about" class="nav-item nav-link">About</a>
+                    <a href="#skill" class="nav-item nav-link">Skills</a>
+                    <a href="#project" class="nav-item nav-link">Projects</a>
+                    <a href="#contact" class="nav-item nav-link">Contact</a>
 
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand d-block d-lg-none">
-            <h1 class="text-primary fw-bold m-0">Tarek</h1>
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse text-center py-4 py-lg-0" id="navbarCollapse">
-            <div class="navbar-nav mx-auto py-0 flex justify-center ">
-                <a href="#home" class="nav-item nav-link">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#skill" class="nav-item nav-link">Skills</a>
-                <a href="#project" class="nav-item nav-link">Projects</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-
-            </div>
-            <!-- <div class="navbar-nav me-auto py-0">
+                </div>
+                <!-- <div class="navbar-nav me-auto py-0">
             </div> -->
-        </div>
-        <span id="scroll-indicator" class="scroll-indicator"></span>
-    </nav>
-    <!-- Navbar End -->
-
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-light " id="home">
-        <div class="container">
-            <div class="row g-5 justify-content-around align-items-center">
-                <div class="col-lg-6 w-auto py-6 pb-0 pt-lg-0">
-                    <h3 class="text-primary mb-3" >I'm</h3>
-                    <h1 class="display-3 mb-3">Tarek Fakhr-el-den</h1>
-                    <h2 class="typed-text-output d-inline"></h2>
-                    <div class="typed-text d-none"> Front End Developer</div>
-                    <div class="d-flex align-items-center pt-5">
-                        <a href="./resume/Tarek Resume.pdf" download class="btn btn-primary py-3 px-4 me-5">Download CV</a>
+            </div>
+            <span id="scroll-indicator" class="scroll-indicator"></span>
+        </nav>
+        <!-- Navbar End -->
+        <!-- Header Start -->
+        <div class="container-fluid bg-light " id="home">
+            <div class="container">
+                <div class="row g-5 justify-content-around align-items-center">
+                    <div class="col-lg-6 w-auto py-6 pb-0 pt-lg-0">
+                        <h3 class="text-primary mb-3">I'm</h3>
+                        <h1 class="display-3 mb-3">Tarek Fakhr-el-den</h1>
+                        <h2 class="typed-text-output d-inline"></h2>
+                        <div class="typed-text d-none"> Front End Developer</div>
+                        <div class="d-flex gap-3 align-items-center pt-5 mt-3">
+                            <button id="cv-button" href="" download
+                                class="btn btn-primary py-3 px-4 text-white flex gap-3">
+                                <span>Read my CV</span> <i class="fa-solid fa-circle-arrow-right text-xl "></i></button>
+                            <a href="./resume/Tarek Resume.pdf" download
+                                class="btn btn-secondary py-3 px-4 me-5 flex gap-3">
+                                <span>Download CV</span><i class="fa-solid fa-file-arrow-down text-xl"></i></a>
+                        </div>
                     </div>
-                </div>
-                <div class="image w-auto align-items-center hidden md:flex">
-                    <div class="image-holder ">
-                        <img class="img-fluid " src="./img/profile3.png" alt="">
+                    <div class="image w-auto align-items-center hidden md:flex">
+                        <div class="image-holder ">
+                            <img class="img-fluid " src="./img/profile3.png" alt="">
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Header End -->
-    <!-- About Start -->
-    <div class="container-xxl py-6" id="about">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex flex-col md:flex-row align-items-center mb-5">
-                        <div class="years flex-shrink-0 text-center  mb-3 md:text-left">
-                            <h1 class="display-1 mb-3 text-center ">1</h1>
-                            <h5 class="mb-0 text-center md:text-left">Year</h5>
+        <!-- Header End -->
+        <!-- About Start -->
+        <div class="container-xxl py-6" id="about">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-flex flex-col md:flex-row align-items-center mb-5">
+                            <div class="years flex-shrink-0 text-center  mb-3 md:text-left">
+                                <h1 class="display-1 mb-3 text-center ">1</h1>
+                                <h5 class="mb-0 text-center md:text-left">Year</h5>
+                            </div>
+                            <h3 class="lh-base mb-0 text-center md:text-left">of working experience as a Front-End web
+                                developer</h3>
                         </div>
-                        <h3 class="lh-base mb-0 text-center md:text-left">of working experience as a Front-End web developer</h3>
-                    </div>
-                    <p class="mb-7 text-center 	md:text-left">
-                        Hello! My name is Tarek I live in Egypt.
-                        <br/> 
-                        <br/> 
-                        Front-End Web Developer...
-                        I have a severe passion for UI effects and animations.
-                        <br/>
-                        <br/>
+                        <p class="mb-7 text-center 	md:text-left">
+                            Hello! My name is Tarek I live in Egypt.
+                            <br />
+                            <br />
+                            Front-End Web Developer...
+                            I have a severe passion for UI effects and animations.
+                            <br />
+                            <br />
 
-                        Well-organized,
-                        problem solver,
-                        and independent employee with close attention to detail.
-                        <br/>
-                        <br/>
-                        Fan of football, and TV series, and a family person.
+                            Well-organized,
+                            problem solver,
+                            and independent employee with close attention to detail.
+                            <br />
+                            <br />
+                            Fan of football, and TV series, and a family person.
                         </p>
-                    <p class="mb-3 text-center md:text-left"><i class="far fa-check-circle text-primary me-3"></i>Afordable Prices</p>
-                    <p class="mb-3 text-center md:text-left"><i class="far fa-check-circle text-primary me-3"></i>High Quality Product</p>
-                    <p class="mb-3 text-center md:text-left md:mb-5"><i class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
+                        <p class="mb-3 text-center md:text-left"><i
+                                class="far fa-check-circle text-primary me-3"></i>Afordable Prices</p>
+                        <p class="mb-3 text-center md:text-left"><i
+                                class="far fa-check-circle text-primary me-3"></i>High
+                            Quality Product</p>
+                        <p class="mb-3 text-center md:text-left md:mb-5"><i
+                                class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
 
-                    <a class="btn btn-primary py-3 px-5 mt-3 mx-auto text-center md:text-left block md:inline  " style="padding: 15px" href="#project">Projects</a>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row g-3 mb-4">
-                        <div class="">
-                            <img class="img-fluid rounded" src="./img/about-1.jpg" alt="">
+                        <a class="btn btn-primary py-3 px-5 mt-3 mx-auto text-center md:text-left block md:inline  "
+                            style="padding: 15px" href="#project">Projects</a>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="row g-3 mb-4">
+                            <div class="">
+                                <img class="img-fluid rounded" src="./img/about-1.jpg" alt="">
+                            </div>
                         </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
+                            <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">8</h2>
+                        </div>
+                        <p class="mb-0">I have done projects with pure HTML & CSS, Games with only JS, projects with
+                            REACT
+                            and Tailwind</p>
                     </div>
-                    <div class="d-flex align-items-center mb-3">
-                        <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
-                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">8</h2>
-                    </div>
-                    <p class="mb-0">I have done projects with pure HTML & CSS, Games with only JS, projects with REACT and Tailwind</p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- About End -->
-    <!-- skills Start -->
-    <div class="container-xxl py-6 pb-5" id="skill">
-        <div class="container">
-            <div class="row g-5">
-                
+        <!-- About End -->
+        <!-- skills Start -->
+        <div class="container-xxl py-6 pb-5" id="skill">
+            <div class="container">
+                <div class="row g-5">
+
+                    <div class=" wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="display-5 mb-5">Skills</h1>
+                        <p class="mb-4">Here are my skills i am certified in some of them.</p>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="font-weight-bold">HTML</h6>
+                                        <h6 class="font-weight-bold">90%</h6>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="font-weight-bold">CSS</h6>
+                                        <h6 class="font-weight-bold">95%</h6>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="95"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="font-weight-bold">Bootstrap</h6>
+                                        <h6 class="font-weight-bold">90%</h6>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="font-weight-bold">Tailwind</h6>
+                                        <h6 class="font-weight-bold">95%</h6>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="font-weight-bold">SCSS</h6>
+                                        <h6 class="font-weight-bold">95%</h6>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="95"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="font-weight-bold">JavaScript</h6>
+                                        <h6 class="font-weight-bold">90%</h6>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="font-weight-bold">TypeScript</h6>
+                                        <h6 class="font-weight-bold">85%</h6>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="85"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+
+                                <div class="skill mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="font-weight-bold">REACT</h6>
+                                        <h6 class="font-weight-bold">85%</h6>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- skills End -->
+        <!-- Projects Start -->
+        <div class="mt-8 p-8 bg-gray-50" id="project">
+            <div class="container">
                 <div class=" wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="display-5 mb-5">Skills</h1>
-                    <p class="mb-4">Here are my skills i am certified in some of them.</p>
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">HTML</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">CSS</h6>
-                                    <h6 class="font-weight-bold">95%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Bootstrap</h6>
-                                    <h6 class="font-weight-bold">70%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="col-lg-6">
+                        <h1 class="display-5 mb-0 text-primary underline decoration-current decoration-8 ">My Projects</h1>
+                    </div>
+                </div>
+                                        <!-- new cards -->
+                  <div class="wow gap-4 fadeInUp" data-wow-delay="0.1s">
+                    <div class="wow fadeInUp cards mx-auto my-16"
+                    data-wow-delay="0.1s">
+                    <div class="card  glassy lg:card-side mb-16 ">
+                        <figure class="card-img-holder "><img src="./img/projects/github.PNG" alt="project 1" /></figure>
+                        <div class="card-body">
+                        <h2 class="card-title text-secondary underline decoration-current decoration-4 underline-offset-8 mb-4">GitHub Finder</h2>
+                        <p class="text-neutral">GitHub Finder Simple Application helps you to search for GitHub
+                            users Info like his name, location, website, number of follwers and so on and his repos information. <br> 
+                            Made with React JS, React Hooks Like useContext, useReducer, useParams, and useEffect, 
+                            Restful APIs, React router, Axios library, Styled with Tailwind CSS & Daisy UI.</p>
+                        <div class="card-actions justify-end">
+                            <a href="https://github-finder-three-khaki.vercel.app/" target="_blank"
+                            rel="noreferrer"><button class="btn btn-warning">Visit</button></a>
+                        <a href="https://github.com/TarekSaeed95/Github-finder" target="_blank"
+                            rel="noreferrer"><button
+                                class="btn btn-secondry text-slate-200">GitHub</button></a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card  glassy lg:card-side  ">
+                        <div class="card-body order-1 lg:order-0">
+                        <h2 class="card-title text-secondary underline decoration-current decoration-4 underline-offset-8 mb-4">Quizzical</h2>
+                        <p class="text-neutral">Quizzical is Web-Application game with 5 Questions about Sports
+                            linked with dynamic API to get new Questions every time
+                            made with React JS, Restful APIs, React Hooks (useState,useEffect) and CSS Libraries.</p>
+                            <FaThumbsUp class="inline" />
+                        <div class="card-actions justify-end">
+                            <a href="https://quzzical.vercel.app/" target="_blank" rel="noreferrer"><button
+                                class="btn btn-warning">Visit</button></a>
+                        <a href="https://github.com/TarekSaeed95/Quzzical" target="_blank"
+                            rel="noreferrer"><button
+                                class="btn btn-secondry text-slate-200">GitHub</button></a>
+                        </div>
+                        </div>
+                        <figure class="order-0 lg:order-1 card-img-holder"><img src="./img/projects/Quizzical.PNG" alt="project 3" /></figure>
+                    </div>
+                    </div>
+                  </div>
+                                        <!-- new cards -->
+                                        <div class=" wow fadeInUp" data-wow-delay="0.1s">
+                                            <div class="">
+                                                <h2 class=" glassy py-10 px-8 m-auto w-fit  display-5  text-center  text-primary ">Other Projects</h2>
+                                            </div>
+                                        </div>
+                <div class="wow gap-4 fadeInUp" data-wow-delay="0.1s">
+                    <div class="wow fadeInUp cards mx-auto my-16 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 justify-items-center  "
+                        data-wow-delay="0.1s">
+                        <div class="card card-other compact  max-w-sm bg-gray-900 shadow-2xl">
+                            <figure 
+                            ><img src="./img/projects/Feedback.PNG" alt="project 2" /></figure>
+                            <div class="card-body ">
+                                <h2 class="card-title text-slate-200">Feedback-website</h2>
+                                <p class="text-gray-500">Website to get clients feedbacks can be edited or
+                                    deleted,feedbacks
+                                    are saved in mocked db by json-server.</p>
+                                <div class="card-actions justify-end">
+                                    <a href="https://feedback-three-tau.vercel.app/" target="_blank"
+                                        rel="noreferrer"><button class="btn btn-warning">Visit</button></a>
+                                    <a href="https://github.com/TarekSaeed95/Feedback-website" target="_blank"
+                                        rel="noreferrer"><button
+                                            class="btn btn-secondry text-slate-200">GitHub</button></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Javascript</h6>
-                                    <h6 class="font-weight-bold">85%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Tailwind</h6>
-                                    <h6 class="font-weight-bold">80%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">REACT</h6>
-                                    <h6 class="font-weight-bold">85%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="card card-other compact  max-w-sm bg-gray-900 shadow-2xl">
+                            <figure><img src="./img/projects/template portfolio.PNG" alt="project 4" /></figure>
+                            <div class="card-body ">
+                                <h2 class="card-title text-slate-200">Portfolio template</h2>
+                                <p class="text-gray-500">Website with many sections,enhanced styles and beautiful
+                                    Animations
+                                    made with HTML and New CSS technologies only.</p>
+                                <div class="card-actions justify-end">
+                                    <a href="https://portfolio-silk-theta-75.vercel.app/" target="_blank"
+                                        rel="noreferrer"><button class="btn btn-warning">Visit</button></a>
+                                    <a href="https://github.com/TarekSaeed95/Portfolio" target="_blank"
+                                        rel="noreferrer"><button
+                                            class="btn btn-secondry text-slate-200">GitHub</button></a>
                                 </div>
                             </div>
                         </div>
+                        <div class="card  card-other compact  max-w-sm bg-gray-900 shadow-2xl">
+                            <figure><img src="./img/projects/speco.PNG" alt="project 5" /></figure>
+                            <div class="card-body ">
+                                <h2 class="card-title text-slate-200">Speco-template</h2>
+                                <p class="text-gray-500">Website with setting box to save user-preferences, multi
+                                    background
+                                    images, bullets to change section.</p>
+                                <div class="card-actions justify-end">
+                                    <a href="https://speco-tareksaeed95.vercel.app/" target="_blank"
+                                        rel="noreferrer"><button class="btn btn-warning">Visit</button></a>
+                                    <a href="https://github.com/TarekSaeed95/Speco-template" target="_blank"
+                                        rel="noreferrer"><button
+                                            class="btn btn-secondry text-slate-200">GitHub</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Projects End -->
+        <!-- Contact Start -->
+        <div class="container-xxl pb-5" id="contact">
+            <div class="container py-5">
+                <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-12 flex mb-5">
+                        <h1 class="display-5 mb-5 mx-auto">Let's Work Together</h1>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="footers right-area flex flex-col items-start flex-wrap justify-between  gap-10 ">
+                            <div class="contact ">
+                                <div class="address flex gap-3 items-center mb-3">
+                                    <i class="fa-solid fa-map-location-dot text-secondary"></i>
+                                    <p>Egypt, Giza</p>
+                                </div>
+                                <div class="phone flex gap-3 items-center mb-3">
+                                    <i class="fa-solid fa-phone text-secondary"></i>
+                                    <p>+201117405320 <br />+201227098962</p>
+                                </div>
+                                <div class="email flex gap-3 items-center">
+                                    <i class="fa-solid fa-envelope text-secondary"></i>
+                                    <p>Tare2sa3eed@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="text  self-end  mt-3">
+                                <div class=" flex  gap-1">
+                                    <a href="https://www.facebook.com/Tar3ek/" rel='noreferrer' class="facebook text-xl"
+                                        target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="https://twitter.com/Tare2_1995" rel='noreferrer' class="twitter text-xl"
+                                        target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCEcrax-NDWdLgw5nC7Q7lFA" rel='noreferrer'
+                                        class="youtube text-xl" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                    <a href="https://www.linkedin.com/in/tarek-saeeed/" rel='noreferrer'
+                                        class="linkedin text-xl" target="_blank"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="https://github.com/TarekSaeed95" rel='noreferrer'
+                                        class="github text-xl" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                            style="height: 100px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button id="submit" class="btn btn-primary py-3 px-5">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- skills End -->
-    <!-- Projects Start -->
-    <div class="mt-8 p-8 bg-gray-50" id="project">
-        <div class="container">
-            <div class=" wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">My Projects</h1>
-                </div>
-            </div>
-            <div class="wow gap-4 fadeInUp" data-wow-delay="0.1s">
-                <div 
-                 class="wow fadeInUp cards mx-auto my-16 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4 justify-items-center  " 
-                data-wow-delay="0.1s">
-                    <div  class=" card  compact max-w-sm bg-gray-900 shadow-2xl ">
-                        <figure><img src="./img/projects/github.PNG" alt="project 1" /></figure>
-                        <div  class="card-body ">
-                            <h2  class="card-title text-slate-200">GitHub Finder</h2>
-                            <p class="text-gray-500">GitHub Finder Simple Application helps you to search for GitHub users Info and Repos in organized layout.</p>
-                            <div  class="card-actions justify-end">
-                              <a href="https://github-finder-three-khaki.vercel.app/" target="_blank" rel="noreferrer"><button  class="btn btn-warning">Visit</button></a>
-                              <a href="https://github.com/TarekSaeed95/Github-finder" target="_blank" rel="noreferrer"><button  class="btn btn-secondry text-slate-200">GitHub</button></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div  class="card compact  max-w-sm bg-gray-900 shadow-2xl">
-                        <figure><img src="./img/projects/Quizzical.PNG" alt="project 3" /></figure>
-                        <div  class="card-body ">
-                            <h2  class="card-title text-slate-200">Quizzical</h2>
-                            <p class="text-gray-500">Quizzical is Web-Application game with 5 Questions about Sports linked with dynamic API to get new Questions every time
-                              go ahead and try it now. <FaThumbsUp  class="inline"/>
-                            </p>
-                            <div  class="card-actions justify-end">
-                              <a href="https://quzzical.vercel.app/" target="_blank" rel="noreferrer"><button  class="btn btn-warning">Visit</button></a>
-                              <a href="https://github.com/TarekSaeed95/Quzzical" target="_blank" rel="noreferrer"><button  class="btn btn-secondry text-slate-200">GitHub</button></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div  class="card compact  max-w-sm bg-gray-900			 shadow-2xl">
-                        <figure><img src="./img/projects/Feedback.PNG" alt="project 2" /></figure>
-                        <div  class="card-body ">
-                            <h2  class="card-title text-slate-200">Feedback-website</h2>
-                            <p class="text-gray-500">Website to get clients feedbacks can be edited or deleted,feedbacks are saved in mocked db by json-server.</p>
-                            <div  class="card-actions justify-end">
-                              <a href="https://feedback-three-tau.vercel.app/" target="_blank" rel="noreferrer"><button  class="btn btn-warning">Visit</button></a>
-                              <a href="https://github.com/TarekSaeed95/Feedback-website" target="_blank" rel="noreferrer"><button  class="btn btn-secondry text-slate-200">GitHub</button></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div  class="card compact  max-w-sm bg-gray-900 shadow-2xl">
-                        <figure><img src="./img/projects/template portfolio.PNG" alt="project 4" /></figure>
-                        <div  class="card-body ">
-                            <h2  class="card-title text-slate-200">Portfolio template</h2>
-                            <p class="text-gray-500">Website with many sections,enhanced styles and beautiful Animations made with HTML and New CSS technologies only.</p>
-                            <div  class="card-actions justify-end">
-                              <a href="https://portfolio-silk-theta-75.vercel.app/" target="_blank" rel="noreferrer"><button  class="btn btn-warning">Visit</button></a>
-                              <a href="https://github.com/TarekSaeed95/Portfolio" target="_blank" rel="noreferrer"><button  class="btn btn-secondry text-slate-200">GitHub</button></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div  class="card compact  max-w-sm bg-gray-900 shadow-2xl">
-                        <figure><img src="./img/projects/speco.PNG" alt="project 5" /></figure>
-                        <div  class="card-body ">
-                            <h2  class="card-title text-slate-200">Speco-template</h2>
-                            <p class="text-gray-500">Website with setting box to save user-preferences, multi background images, bullets to change section.</p>
-                            <div  class="card-actions justify-end">
-                              <a href="https://speco-tareksaeed95.vercel.app/" target="_blank" rel="noreferrer"><button  class="btn btn-warning">Visit</button></a>
-                              <a href="https://github.com/TarekSaeed95/Speco-template" target="_blank" rel="noreferrer"><button  class="btn btn-secondry text-slate-200">GitHub</button></a>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-            
-        </div>
-    </div>
-    </div>
-    
-    <!-- Projects End -->
-
-
-
-
-    <!-- Contact Start -->
-    <div class="container-xxl pb-5" id="contact">
-        <div class="container py-5">
-            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-12 flex mb-5">
-                    <h1 class="display-5 mb-5 mx-auto">Let's Work Together</h1>
-                    </div>
-                                </div>
-            <div class="row g-5">
-                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="footers right-area flex flex-col items-start flex-wrap justify-between  gap-10 lg:gap-0">
-                        <div class="contact ">
-                            <div class="address flex gap-3 items-center mb-3">
-                                <i class="fa-solid fa-map-location-dot text-secondary"></i>
-                                <p>Egypt, Giza</p>
-                            </div>
-                            <div class="phone flex gap-3 items-center mb-3">
-                                <i class="fa-solid fa-phone text-secondary"></i>
-                                <p>+201117405320 <br/>+201227098962</p>
-                            </div>
-                            <div class="email flex gap-3 items-center">
-                                <i class="fa-solid fa-envelope text-secondary"></i>
-                                <p>Tare2sa3eed@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="text  self-end  mt-3">
-                                <div class=" flex  ">
-                                    <a href="https://www.facebook.com/Tar3ek/" rel='noreferrer' class="facebook text-xl" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                                    <a href="https://twitter.com/Tare2_1995" rel='noreferrer' class="twitter text-xl" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                                    <a href="https://www.youtube.com/channel/UCEcrax-NDWdLgw5nC7Q7lFA" rel='noreferrer' class="youtube text-xl" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                                    <a href="https://www.linkedin.com/in/tarek-saeeed/" rel='noreferrer' class="linkedin text-xl" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                                </div>
-                        </div>
-                    </div>
-                
-                </div>
-                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary py-3 px-5" >Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
-
-
-
-
-    <!-- Copyright Start -->
-    <div class="container-fluid bg-dark text-white py-4">
+        <!-- Contact End -->
+        <!-- Copyright Start -->
+        <div class="container-fluid bg-dark text-white py-4">
             <div class="container">
                 <div class="flex items-end justify-center">
-                        &copy; <a class=" text-sky-400 ml-1" href="#">Tarek Portfolio</a>, All Right Reserved.
+                    &copy; <span class=" text-sky-400 ml-1" href="#">Tarek Portfolio</span>, All Right Reserved.
                 </div>
             </div>
         </div>
-   
-    </div>
-    </div>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-warning btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
+    <div class="cv-page justify-center align-items-center">
+        <!-- Navbar Start -->
+        <nav id="cv-nav"
+            class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-16 justify-between">
+            <a href="index.html" class="navbar-brand d-block">
+                <h1 class="text-primary fw-bold m-0">Tarek</h1>
+            </a>
+            <div class="navbar-nav py-0 flex ">
+                <a id="main-btn" class=" btn btn-primary  px-8 text-white ">Back to Main</a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+        <div class="container mt-32 flex justify-center items-center">
+            <div class="img-holder">
+                <img src="./img/resume.PNG" alt="">
+            </div>
+        </div>
+        <!-- Copyright Start -->
+        <div class="cv-footer fixed-bottom container-fluid bg-dark text-white py-4">
+            <div class="container">
+                <div class="flex items-end justify-center">
+                    &copy; <span class=" text-sky-400 ml-1" href="#">Tarek Portfolio</span>, All Right Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span id="scroll-indicator" class="scroll-indicator"></span>
+
+
+    </div>
+    </div>
+    </div>
     <!-- skills End -->
+    <!-- JavaScript Libraries -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./lib/wow/wow.min.js"></script>
+    <script type="text/javascript" src="./lib/easing/easing.min.js"></script>
+    <script type="text/javascript" src="./lib/waypoints/waypoints.min.js"></script>
+    <script type="text/javascript" src="./lib/typed/typed.min.js"></script>
+    <script type="text/javascript" src="./lib/counterup/counterup.min.js"></script>
+    <script type="text/javascript" src="./lib/owlcarousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="./lib/isotope/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="./lib/lightbox/js/lightbox.min.js"></script>
+    <script type="text/javascript" src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="./js/all.min.js"></script>
+    <!-- Template Javascript -->
+    <script type="text/javascript" src="./index.js"></script>
 
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-warning btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-        <!-- JavaScript Libraries -->
-        <script  type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script  type="text/javascript" src="./lib/wow/wow.min.js"></script>
-        <script  type="text/javascript" src="./lib/easing/easing.min.js"></script>
-        <script  type="text/javascript" src="./lib/waypoints/waypoints.min.js"></script>
-        <script  type="text/javascript" src="./lib/typed/typed.min.js"></script>
-        <script  type="text/javascript" src="./lib/counterup/counterup.min.js"></script>
-        <script  type="text/javascript" src="./lib/owlcarousel/owl.carousel.min.js"></script>
-        <script  type="text/javascript" src="./lib/isotope/isotope.pkgd.min.js"></script>
-        <script  type="text/javascript" src="./lib/lightbox/js/lightbox.min.js"></script>
-        <script  type="text/javascript" src="https://cdn.tailwindcss.com"></script>
-        <script  type="text/javascript" src="./js/all.min.js"></script>
-        <!-- Template Javascript -->
-        <script type="text/javascript" src="./js/index.js"></script>
-    
 
 
 </body>
